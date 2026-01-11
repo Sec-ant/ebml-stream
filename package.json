@@ -1,0 +1,65 @@
+{
+	"name": "@sec-ant/ebml-stream",
+	"private": false,
+	"version": "0.0.0",
+	"type": "module",
+	"files": [
+		"./dist"
+	],
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"default": "./dist/index.js"
+		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Sec-ant/ebml-stream.git"
+	},
+	"homepage": "https://github.com/Sec-ant/ebml-stream",
+	"bugs": {
+		"url": "https://github.com/Sec-ant/ebml-stream/issues",
+		"email": "zezhengwu@proton.me"
+	},
+	"author": {
+		"name": "Ze-Zheng Wu"
+	},
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"update-hooks": "simple-git-hooks",
+		"dev": "vite",
+		"lint": "biome lint .",
+		"type-check": "tsc --noEmit --emitDeclarationOnly false",
+		"format": "biome format --write .",
+		"check": "biome check --write .",
+		"prebuild": "pnpm -s check && pnpm -s type-check",
+		"build": "vite build",
+		"preview": "vite preview",
+		"test": "vitest",
+		"bench": "vitest bench"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.11",
+		"@changesets/cli": "^2.29.8",
+		"@commitlint/cli": "^20.3.1",
+		"@commitlint/config-conventional": "^20.3.1",
+		"@types/node": "^25.0.6",
+		"@vitest/browser": "^4.0.16",
+		"@vitest/browser-playwright": "^4.0.16",
+		"@vitest/coverage-istanbul": "^4.0.16",
+		"@vitest/ui": "^4.0.16",
+		"lint-staged": "^16.2.7",
+		"playwright": "^1.57.0",
+		"simple-git-hooks": "^2.13.1",
+		"typescript": "~5.9.3",
+		"vite": "^7.3.1",
+		"vite-plugin-dts": "^4.5.4",
+		"vitest": "^4.0.16"
+	},
+	"packageManager": "pnpm@10.28.0+sha512.05df71d1421f21399e053fde567cea34d446fa02c76571441bfc1c7956e98e363088982d940465fd34480d4d90a0668bc12362f8aa88000a64e83d0b0e47be48"
+}
