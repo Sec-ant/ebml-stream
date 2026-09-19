@@ -46,8 +46,8 @@
 	"devDependencies": {
 		"@biomejs/biome": "^2.3.11",
 		"@changesets/cli": "^2.29.8",
-		"@commitlint/cli": "^20.3.1",
-		"@commitlint/config-conventional": "^20.3.1",
+		"@commitlint/cli": "^21.0.0",
+		"@commitlint/config-conventional": "^21.0.0",
 		"@types/node": "^25.0.6",
 		"@vitest/browser": "^4.0.16",
 		"@vitest/browser-playwright": "^4.0.16",
